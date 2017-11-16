@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
    
-    var buttonCount = 0
+    var buttonCount = 0// Am declarat o variabila de timp int
     @IBOutlet weak var Label: UILabel!
     
     @IBAction func changeText(_ sender: Any) {
