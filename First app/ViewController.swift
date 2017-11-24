@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var Label: UILabel!
     
     @IBAction func changeText(_ sender: Any) {
-        buttonCount = buttonCount+1
+        buttonCount += 1
         print (buttonCount)
         if buttonCount >= 10 {
             view.backgroundColor = UIColor.cyan
