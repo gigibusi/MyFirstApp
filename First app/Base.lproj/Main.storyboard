@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,7 +26,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlV-St-VX0">
-                                <rect key="frame" x="161" y="354" width="54" height="30"/>
+                                <rect key="frame" x="160.5" y="354" width="54" height="30"/>
                                 <state key="normal" title="Loveste"/>
                                 <connections>
                                     <action selector="changeText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KFi-27-BZg"/>
@@ -61,22 +62,30 @@
                                     </mask>
                                 </variation>
                             </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U1T-m2-kB0">
+                                <rect key="frame" x="163" y="149" width="51" height="31"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="qFU-tK-CrO" firstAttribute="top" secondItem="lnO-cz-ZhR" secondAttribute="bottom" constant="50" id="04V-Kr-qS4"/>
                             <constraint firstItem="Bnf-og-7fF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2NY-YR-pTd"/>
                             <constraint firstItem="qlV-St-VX0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FaC-ch-1J2"/>
+                            <constraint firstItem="lnO-cz-ZhR" firstAttribute="firstBaseline" secondItem="U1T-m2-kB0" secondAttribute="baseline" constant="34.5" id="NwX-5C-LzW"/>
                             <constraint firstItem="Bnf-og-7fF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WmQ-eP-JYS"/>
                             <constraint firstItem="qFU-tK-CrO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZuK-th-Jef"/>
                             <constraint firstItem="Bnf-og-7fF" firstAttribute="top" secondItem="qFU-tK-CrO" secondAttribute="bottom" constant="18" id="kBI-fE-L1M"/>
                             <constraint firstItem="qlV-St-VX0" firstAttribute="top" secondItem="Bnf-og-7fF" secondAttribute="bottom" constant="10" id="kWt-jh-Yk7"/>
                             <constraint firstItem="lnO-cz-ZhR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r7H-nz-mGL"/>
+                            <constraint firstItem="U1T-m2-kB0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zM7-Ta-TMF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="Label" destination="Bnf-og-7fF" id="5mv-6E-GQo"/>
+                        <outlet property="additionSwitch" destination="U1T-m2-kB0" id="H3Q-Kv-4pz"/>
+                        <outlet property="botText" destination="qFU-tK-CrO" id="grA-tF-Tfv"/>
+                        <outlet property="topText" destination="lnO-cz-ZhR" id="hrI-OQ-8BO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

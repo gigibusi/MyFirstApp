@@ -10,22 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
    
-    var buttonCount = 0// Am declarat o variabila de timp int
+   
     @IBOutlet weak var Label: UILabel!
+    @IBOutlet weak var topText: UITextField!
+    @IBOutlet weak var botText: UITextField!
+    @IBOutlet weak var additionSwitch: UISwitch!
+    
+    
     
     @IBAction func changeText(_ sender: Any) {
-        buttonCount += 1
-        print (buttonCount)
-        if buttonCount >= 10 {
-            view.backgroundColor = UIColor.cyan
-            Label.text = "Ai lovit butonul de 10 ori!"
-        }
-        if buttonCount >= 15
+        let addition = additionSwitch.isOn
+        if addition
         {
-            view.backgroundColor = UIColor.green
-            Label.text = "Nu ma mai lovi,ai ajuns la 15 :("
+            let sum = Double(topText.text!)! + Double(botText.text!)!
+            Label.text = "Aici se afiseaza...\(sum)"
+        }else{
+            let sum = Double(topText.text!)! - Double(botText.text!)!
+            Label.text = "Aici se afiseaza...\(sum)"
         }
-        
+
         
     }
     
